@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>How To create Responsive Login Form Design with Social Login Buttons</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth/login.css') }}?v=1">
+
+</head>
+<body>
+
+<div class="login-page">
+  <div class="login-form">
+    <form>
+      <h2>Login</h2>
+      <div class="form-box">
+        <i class="fas fa-user"></i>
+        <input type="text" name="username" placeholder="User name">
+      </div>
+      <div class="form-box">
+        <i class="fas fa-key"></i>
+        <input type="password" name="password" placeholder="Password">
+      </div>
+      <div class="form-box">
+        <label class="remember">
+          <input type="checkbox" name="remember"> Remember me
+        </label>
+                <a href="#" class="forgot-pwd">Forgot Password?</a>
+      </div>
+            <div class="form-box">
+                <button type="submit" class="submit-btn">Log in</button>
+            </div>
+    </form>
+  </div>
+
+    <div class="social-login">
+        <h3>Login<br><span>With Social media account</span></h3>
+        <div class="social-btn">
+           <button type="button" class="twitter-btn"><i class="fab fa-twitter-square"></i> Twitter</button>
+           <button type="button" class="facebook-btn"><i class="fab fa-facebook-square"></i> Facebook</button>
+           <button type="button" class="google-btn"><i class="fab fa-google-plus-square"></i> Google+</button>
+        </div><br>
+
+        <hr>
+
+        <div class="new-register">
+            <p>Don’t have an account? <a href="#">Register Now!</a></p>
+            <div class="form-box">
+                <button type="submit" class="submit-btn">Register</button>
+            </div>
+        </div>
+    </div>   
+</div>
+</body>
+</html>
