@@ -1,28 +1,58 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Login Page </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='auth/login.css') }}">
-  </head>
-  <body>
-    <div class="container flex">
-      <div class="facebook-page flex">
-        <form action="#">
-          <input type="email" placeholder="Email or phone number" required>
-          <input type="password" placeholder="Password" required>
-          <div class="link">
-            <button type="submit" class="login">Login</button>
-            <a href="#" class="forgot">Forgot password?</a>
-          </div>
-          <hr>
-          <div class="button">
-		  <a href="{{ url_for('auth.signup') }}">Create an account</a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Login and Signup </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    </head>
+    <body>
+        <section class="container forms">
+        <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+		    <form action="{{ url_for('auth/login') }}" method='POST'>
+			{{ form.csrf_token }}
+			{{ form.hidden_tag() }}
+			<div class="field input-field">
+				<input type="email" placeholder="Email" class="input"  {{ form.email }} >
+			</div>
+			<div class="field input-field">
+                                <input type="password" placeholder="Password" class="password" {{ form.password }}>                           </div>
+			<div class="field button-field">
+				<button type="submit" style="background-color: #1877f2; color: #ffffff;">{{ form.submit() }}</button>
+			</div>
+		    </form>
+		    <div class="form-link">
+                        <span>Don't have an account? <a href="{{ url_for('auth.signup') }}" class="link signup-link">Signup</a>
+			</span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="#" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+        </section>
+    </body>
 </html>

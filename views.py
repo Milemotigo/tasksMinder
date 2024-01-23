@@ -2,10 +2,6 @@ from flask import Blueprint, render_template
 
 todo = Blueprint('todo', __name__)
 
-@todo.route('/')
-def dashboard():
-    return render_template('dashboard.html')
-
 @todo.route('/todo')
 def tasks():
     return render_template('index.html')

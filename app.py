@@ -14,7 +14,7 @@ consistently throughout your program
 #print(basedir)
 app = Flask(__name__)
 
-app.config[SECRET_KEY] = '7c46044f81919a429e07cdb5a76dcee4'
+app.config['SECRET_KEY'] = '7c46044f81919a429e07cdb5a76dcee4'
 
 app.config['SQLALCHEMY_DATABASE_URI'] =\
     'sqlite:///' + os.path.join(basedir, 'todoApp.db')

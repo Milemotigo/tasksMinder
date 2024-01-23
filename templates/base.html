@@ -42,7 +42,7 @@
 
                 <ul class="menu-links">
                     <li class="nav-link">
-			    <a href="{{ url_for('todo.dashboard') }}">
+			    <a href="{{ url_for('auth.dashboard') }}">
                             <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
@@ -88,13 +88,13 @@
 
             <div class="bottom-content">
                 <li class="">
-				<a href="{{ url_for('auth.auth') }}">
+				<a href="{{ url_for('auth.signup') }}">
 				<i class='bx bx-user-plus icon'></i>
                         <span class="text nav-text">Login/Signup</span>
                     </a>
                 </li>
 		<li class="">
-                        <a href="{{ url_for('auth.auth') }}">
+                        <a href="{{ url_for('auth.dashboard') }}">
 			<i class='bx bx-log-out icon' ></i>
 			<span class="text nav-text">
 			Logout
