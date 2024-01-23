@@ -169,3 +169,12 @@ a.google span{
     }
     
 }
+
+/* Add this style to customize the submit button */
+.custom-submit-btn {
+    /* Your custom styles go here */
+    background-color: white; /* Change the background color to your preference */
+    color: blue; /* Change the text color to your preference */
+    /* Add any other styles you want to customize */
+}
+
