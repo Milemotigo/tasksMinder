@@ -46,7 +46,7 @@
         <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
       <hr>
       <div class="form-group">
-        <p class="text-center">Already have an account? <a href="#">Login</a></p>
+	      <p class="text-center">Already have an account? <a href="{{ url_for('auth.login') }}">Login</a></p>
       </div>
   </form>
 </div>

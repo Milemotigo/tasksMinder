@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/side-bar/side-bar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/side-bar.css') }}">
 
     
     <!----===== Boxicons CSS ===== -->
@@ -88,11 +88,19 @@
 
             <div class="bottom-content">
                 <li class="">
-			<a href="{{ url_for('auth.signup') }}">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
+				<a href="{{ url_for('auth.auth') }}">
+				<i class='bx bx-user-plus icon'></i>
+                        <span class="text nav-text">Login/Signup</span>
                     </a>
                 </li>
+		<li class="">
+                        <a href="{{ url_for('auth.auth') }}">
+			<i class='bx bx-log-out icon' ></i>
+			<span class="text nav-text">
+			Logout
+			</span>
+			</a>
+		</li>
 
                 <li class="mode">
                     <div class="sun-moon">

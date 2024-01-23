@@ -1,143 +1,164 @@
-<style>
-*{
-  margin: 0px;
-  padding: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: arial;
-}
-hr{
-    border: 1px solid #eaeaea;
-    margin: 20px 0px
-}
-button:hover{
-    opacity: 0.9;
-}
-.login-page {
-    border: 1px solid #ddd;
-    width: 500px;
-    margin: 20px auto;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-}
-.login-form{
-    padding: 30px 40px;
-}
-.login-form h2 {
-    text-align: center;
-    font-size: 28px;
-    margin: 0px 0px 30px;
-    color: #777;
-}
-.login-form input {
-    width: 100%;
-    margin-bottom: 13px;
-    height: 44px;
-    border: 1px solid #00BCD4;
-    padding: 0px 45px;
-    font-size: 15px;
-    border-radius: 4px;
-}
-.form-box {
-    position: relative;
-}
-.login-form form i {
-    position: absolute;
-    top: 11px;
-    font-size: 20px;
-    left: 15px;
-    color: #b1b1b1;
-}
-.remember {
-    color: #b1b1b1;
-    font-size: 15px;
-}
-.remember input {
-    height: auto;
-    width: auto;
-}
-.forgot-pwd {
-    float: right;
-    text-decoration: none;
-    color: #FF5722;
-    font-size: 15px;
-}
-.submit-btn {
-    border: none;
-    background-color: #4caf50;
-    color: #fff;
-    border-radius: 4px;
-    padding: 8px 20px;
-    margin: 20px auto 0px;
-    display: table;
-    font-size: 15px;
-    text-transform: uppercase;
-}
-.social-login {
-    background-color: #fff;
-    padding: 20px 40px;
-}
-.social-login h3 {
-    text-align: center;
-    font-size: 24px;
-    margin: 0px 0px 30px;
-    color: #777;
-}
-.social-login h3 span {
-    font-size: 16px;
-    font-weight: normal;
-}
-.social-btn button {
-    width: 32.333%;
-    border: none;
-    padding: 10px 10px;
-    color: #fff;
-    font-size: 17px;
-    border-radius: 4px;
-    position: relative;
-}
-.twitter-btn {
-    background-color:#20aae8;
-}
-.facebook-btn{
-    background-color:#3a5898;
-}
-.google-btn {
-    background-color:#d44735;
+  font-family: 'Roboto', sans-serif;
 }
 
-.new-register p{
-    text-align: center;
+.flex {
+  display: flex;
+  align-items: center;
 }
-.new-register p a {
-    text-decoration: none;
-    color: #FF5722;
-    font-weight: bold;
+
+.container {
+  min-height: 50vh;
+  justify-content: center;
+  background: #f0f2f5;
+  padding: 0 20px;
 }
 
 
-/*--Below CSS for small devices--*/
-@media (max-width: 767px){
-.login-page {
-    width: 90%;
+.facebook-page {
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
 }
-.login-form{
-    padding: 20px 15px;
+
+.facebook-page .text {
+  margin-bottom: 90px;
 }
-.remember {
-    font-size: 14px;
+
+.facebook-page h1 {
+  color: #1877f2;
+  font-size: 4rem;
+  margin-bottom: 10px;
 }
-.forgot-pwd {
-    font-size: 14px;
+
+.facebook-page p {
+  font-size: 1.75rem;
+  white-space: nowrap;
 }
-.social-login h3 span {
-    font-size: 14px;
+
+form {
+  display: flex;,
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
 }
-.social-btn button {
-    width: 100%;
-    margin: 5px 0px;
+
+form input {
+  height: 55px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding: 0 14px;
 }
-.social-login h3 {
-    margin: 0px 0px 15px;
+
+form input:focus {
+  outline: none;
+  border-color: #1877f2;
 }
+
+::placeholder {
+  color: #777;
+  font-size: 1.063rem;
 }
-</style>
+
+.link {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+
+.link .login {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #03A9F4;
+  padding: 15px 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.link .login:hover {
+  background: #0d65d9;
+}
+
+form a {
+  text-decoration: none;
+}
+
+.link .forgot {
+  color: #1877f2;
+  font-size: 0.875rem;
+}
+
+.link .forgot:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.button {
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button a {
+  padding: 15px 20px;
+  background: #42b72a;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.063rem;
+  font-weight: 300;
+  transition: 0.2s ease;
+}
+
+.button a:hover {
+  background: #3ba626;
+}
+
+@media (max-width: 900px) {
+  .facebook-page {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .facebook-page .text {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 460px) {
+  .facebook-page h1 {
+    font-size: 3.5rem;
+  }
+
+  .facebook-page p {
+    font-size: 1.3rem;
+  }
+
+  form {
+    padding: 15px;
+  }
+}
