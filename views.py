@@ -3,7 +3,7 @@ from flask import Blueprint, render_template
 todo = Blueprint('todo', __name__)
 
 
-@todo.route('/dashboard')
+@todo.route('/')
 def dashboard():
     return render_template('dashboard.html')
 
@@ -19,11 +19,11 @@ def revenue():
 def analytics():
     return render_template('analytics.html')
 
-@todo.route('/notes')
-def notes():
-    return render_template('notes.html')
+#@todo.route('/notes')
+#def notes():
+#    return render_template('cards.html')
 
 @todo.route('/wallets')
 def wallets():
-    return render_template('wallets.html')
+    return render_template('cards.html')
 

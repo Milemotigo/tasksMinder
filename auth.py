@@ -14,14 +14,18 @@ def login():
         return redirect(url_for('todo.dashboard'))
     return render_template('auth/login.html', title='Login', form=form)
 
-@auth.route('/signup', methods=['GET', 'POST'])
-def signup():
+@auth.route('/register', methods=['GET', 'POST'])
+def register():
     form = RegistrationForm()
-    if form.username.data is None:
-        print('not found')
     if form.validate_on_submit():
-        print(form.username)
+        print('success')
         flash(f'Account created successfully for {form.username.data}!', 'success')
         return redirect(url_for('todo.dashboard'))
-    return render_template('auth/signup.html', title='Register', form=form)
+    else:
+        print(' not valid reg ')
+    return render_template('auth/register.html', title='Register', form=form)
+
+@auth.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    return render_template('auth/forgot-password.html')
 
