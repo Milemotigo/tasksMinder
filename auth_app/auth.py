@@ -1,8 +1,9 @@
 from flask import Blueprint, render_template, flash, redirect, url_for
-from forms import LoginForm, RegistrationForm
-from utils import split_email
+from .forms import LoginForm, RegistrationForm
+from .utils import split_email
 
 auth = Blueprint('auth', __name__)
+#auth = create_app()
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():

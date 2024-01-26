@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
-
+#from app import create_app
 todo = Blueprint('todo', __name__)
-
+#todo = create_app()
 
 @todo.route('/')
 def dashboard():
@@ -9,7 +9,8 @@ def dashboard():
 
 @todo.route('/notifications')
 def notifications():
-    return render_template('notifications.html')
+    print('here')
+    return render_template('topNav/notifications.html')
 
 @todo.route('/revenue')
 def revenue():

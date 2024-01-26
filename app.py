@@ -2,28 +2,34 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
-from views import todo
-from auth import auth
+from .views import todo
+from .auth_app.auth import auth
+from flask_bcrypt import Bcrypt
 
-basedir = os.path.abspath(os.path.dirname(__file__))
-'''
-basedir makes it easier to rganize
-and locate files like databases
-consistently throughout your program
-'''
-#print(basedir)
-app = Flask(__name__)
 
-app.config['SECRET_KEY'] = '7c46044f81919a429e07cdb5a76dcee4'
+db = SQLAlchemy()
 
-app.config['SQLALCHEMY_DATABASE_URI'] =\
-    'sqlite:///' + os.path.join(basedir, 'todoApp.db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-db = SQLAlchemy(app)
+def create_app():
+    app = Flask(__name__)
+    bcrypt = Bcrypt()
+    basedir = os.path.abspath(os.path.dirname(__file__))
+    '''
+    basedir makes it easier to organize
+    and locate files like databases
+    consistently throughout your program
+    '''
+    app.config['SECRET_KEY'] = '7c46044f81919a429e07cdb5a76dcee4'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'TaskMinder.db')
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.register_blueprint(todo)
-app.register_blueprint(auth)
+    db.init_app(app)
+    bcrypt.init_app(app)
 
-if __name__=='__main__':
-    app.run(debug=True)
+    #todo app blueprint register
+    app.register_blueprint(todo)
+
+    #auth app registration
+    app.register_blueprint(auth)
+
+    return app
