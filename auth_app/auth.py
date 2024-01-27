@@ -37,13 +37,16 @@ def login():
                 login_user(user)
                 return redirect(url_for('todo.dashboard'))
             else:
-                flash('Invalid emaul address or password', 'danger')
+                flash('Invalid email address or password', 'danger')
                 print(f'Invalid username or password')
         except Exception as e:
-            print(f"Error during login: {str(e)}")
-            flash(f'An error occurred: {e}', 'danger')
+            print(f"Error during log: {str(e)}")
+            flash(e, 'danger')
 
-    return render_template('auth/login.html', title='Login', form=form)
+    return render_template('auth/login.html',
+                           title='Login',
+                           form=form
+                           )
 
 
 @auth.route('/register', methods=['GET', 'POST'])
@@ -68,6 +71,9 @@ def register():
         except Exception as e:
             print(f"Error during registration: {str(e)}")
             flash(f'Something went wrong during registration')
+        except IntegrityError:
+            db.session.rollback()
+            flash(f"User already exists!.", "warning")
     else:
         print(' not valid reg ')
         flash(f'Something went wrong during registration', 'danger')
