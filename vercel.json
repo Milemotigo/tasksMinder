@@ -1,14 +1,16 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "/run.py",
+      "src": "/todoApp/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/run.py"
+      "dest": "/todoApp/app.py"
     }
   ]
 }
+
