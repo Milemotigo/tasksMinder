@@ -41,5 +41,5 @@ def create_app():
     app.register_blueprint(auth)
 
     return app
-create_app()
+
 from ..auth_app.auth import auth
