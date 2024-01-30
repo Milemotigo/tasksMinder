@@ -6,7 +6,8 @@ todo = Blueprint('todo', __name__)
 from flask_login import (
         login_user,
         logout_user,
-        current_user,                                                                           login_required
+        current_user,
+        login_required
         )
 
 @todo.route('/')

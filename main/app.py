@@ -2,7 +2,7 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
-from .views import todo
+from ..views import todo
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_migrate import Migrate
@@ -41,5 +41,5 @@ def create_app():
     app.register_blueprint(auth)
 
     return app
-
-from .auth_app.auth import auth
+create_app()
+from ..auth_app.auth import auth

@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, flash, redirect, url_for, request
 from .forms import LoginForm, RegistrationForm
 from .utils import split_email
-from ..app import db, bcrypt, login_manager
+from ..main.app import db, bcrypt, login_manager
 from .models import User
 
 from flask_bcrypt import generate_password_hash
