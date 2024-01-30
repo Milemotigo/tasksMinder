@@ -2,13 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "/todoApp/app.py",
+      "src": "todoApp/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "(.*)",
       "dest": "/todoApp/app.py"
     }
   ]
