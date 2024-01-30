@@ -1,10 +1,19 @@
-#!/usr/bin/python3
-import os
+##!/usr/bin/python3
+#import os
 
 # Set Flask app and debug mode
-os.environ['FLASK_APP'] = 'app'
-os.environ['FLASK_DEBUG'] = '1'
+#os.environ['FLASK_APP'] = 'app'
+#os.environ['FLASK_DEBUG'] = '1'
 
 # Run the Flask app
-os.system('flask run')
+#os.system('flask run')
+
+from app import create_app
+
+# Create the Flask app
+app = create_app()
+
+if __name__ == "__main__":
+    # Run the app
+    app.run()
 
