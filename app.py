@@ -5,9 +5,10 @@ from sqlalchemy.sql import func
 from .views import todo
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
-
+from flask_migrate import Migrate
 
 db = SQLAlchemy()
+migrate = Migrate()
 bcrypt = Bcrypt()
 
 login_manager = LoginManager()
@@ -30,6 +31,7 @@ def create_app():
     db.init_app(app)
     bcrypt.init_app(app)
     login_manager.init_app(app)
+    migrate.init_app(app, db)
 
 
     #todo app blueprint register
