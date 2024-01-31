@@ -2,7 +2,7 @@
 import os
 
 # Set Flask app and debug mode
-os.environ['FLASK_APP'] = 'main.app'
+os.environ['FLASK_APP'] = 'api.app'
 os.environ['FLASK_DEBUG'] = '1'
 
 # Run the Flask app
