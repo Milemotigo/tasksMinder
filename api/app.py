@@ -40,6 +40,10 @@ def create_app():
     #auth app registration
     app.register_blueprint(auth)
 
+    #note app registration
+    app.register_blueprint(note)
+
     return app
 
 from ..auth_app.auth import auth
+from ..note_app.views import note

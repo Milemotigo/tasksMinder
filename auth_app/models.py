@@ -16,3 +16,4 @@ class User(UserMixin, db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
+    note = db.relationship('Note', backref='user', cascade='all, delete-orphan', lazy='dynamic')
