@@ -8,4 +8,3 @@ class Plan(UserMixin, db.Model):
 
     id = db.Column(db.integer, primary_key=True)
 
-

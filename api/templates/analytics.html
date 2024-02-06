@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrolling Top Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+</svg>
+  <!-- Your custom styles go here -->
+  <style>
+    /* Add some styles to create a smooth transition effect */
+    .navbar-transition {
+      transition: top 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Navbar -->
+<nav class="navbar navbar-expand navbar-light bg-light fixed-top navbar-transition">
+  <!-- Your navbar content goes here -->
+  <a class="navbar-brand" href="#">Your Brand</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <!-- Add more menu items as needed -->
+    </ul>
+  </div>
+</nav>
+<nav class="navbar navbar-expand navbar-light bg-light topnav fixed-bottom">                <button id="homeMenuButton" class="btn btn-link d-md-none rounded-circle mr-3">             <i class="bi bi-house-door-fill"></i>                                               </button>
+	<i class="bi bi-house-door"></i>
+</nav>
+
+<!-- Your page content goes here -->
+<div class="container mt-5">
+  <!-- Your page content goes here -->
+  <h1>Your Content</h1>
+  <div class="container mt-5">
+  <h1>Welcome to Your Website</h1>
+  <p>This is a sample webpage with a scrolling top navbar. Scroll down to see more content.</p>
+
+  <h2>About Us</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nibh a congue blandit, elit lectus pharetra elit, sit amet sodales justo odio nec tortor.</p>
+
+  <h2>Our Services</h2>
+  <ul>
+    <li>Service 1</li>
+    <li>Service 2</li>
+    <li>Service 3</li>
+  </ul>
+
+  <h2>Contact Us</h2>
+  <p>Feel free to contact us for any inquiries or feedback. We'd love to hear from you!</p>
+
+  <!-- Add more content as needed -->
+</div>
+<div class="container mt-5">
+  <h1>Welcome to Your Website</h1>
+  <p>This is a sample webpage with a scrolling top navbar. Scroll down to see more content.</p>
+
+  <h2>About Us</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nibh a congue blandit, elit lectus pharetra elit, sit amet sodales justo odio nec tortor.</p>
+
+  <h2>Our Services</h2>
+  <ul>
+    <li>Service 1</li>
+    <li>Service 2</li>
+    <li>Service 3</li>
+  </ul>
+
+  <h2>Contact Us</h2>
+  <p>Feel free to contact us for any inquiries or feedback. We'd love to hear from you!</p>
+
+  <!-- Add more content as needed -->
+</div>
+
+</div>
+
+<!-- Bootstrap JS and Popper.js (required for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+

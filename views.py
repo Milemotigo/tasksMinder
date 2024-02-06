@@ -31,7 +31,7 @@ def analytics():
 #def notes():
 #    return render_template('cards.html')
 
-@todo.route('/wallets')
+@todo.route('/wallet')
 def wallets():
-    return render_template('cards.html', current_user=current_user)
+    return render_template('wallet.html', current_user=current_user)
 

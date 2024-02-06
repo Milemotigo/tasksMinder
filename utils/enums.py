@@ -22,3 +22,8 @@ class ProjectStatus(Enum):
     IN_PROGRESS = 'in progress'
     TERMINATED = 'terminated'
     COMPLETED = 'completed'
+
+class PlanType(Enum):
+    PROJECT = 'project'
+    TASK = 'task'
+    OTHER = 'other'
