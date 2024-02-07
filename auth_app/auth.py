@@ -1,7 +1,8 @@
 from flask import Blueprint, render_template, flash, redirect, url_for, request
 from .forms import LoginForm, RegistrationForm
 from .utils import split_email
-from ..api.app import db, bcrypt, login_manager
+from ..api.app import bcrypt, login_manager
+from ..utils.save import save
 from .models import User
 
 from flask_bcrypt import generate_password_hash
@@ -61,8 +62,7 @@ def register():
                         email=email, 
                         password=bcrypt.generate_password_hash(password)
                         )
-                db.session.add(newUser)
-                db.session.commit()
+                save(newUser)
                 login_user(newUser)
 
                 flash(f'Account created successfully for {form.username.data}!', 'success')

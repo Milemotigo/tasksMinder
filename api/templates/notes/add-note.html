@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block title %}addnote{% endblock title %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h1>Create a New Note</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.title.label }}: {{ form.title() }}
+        </div>
+        <div>
+            {{ form.content.label }}: {{ form.content() }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+{% endif %}
+{% endblock content %}
