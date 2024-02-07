@@ -35,3 +35,7 @@ def analytics():
 def wallets():
     return render_template('wallet.html', current_user=current_user)
 
+@todo.route('/sidebar')
+def sidebar():
+    return render_template('partials/plus-nav.html')
+
