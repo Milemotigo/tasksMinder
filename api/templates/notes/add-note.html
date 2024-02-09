@@ -7,13 +7,13 @@
     <h1>Create a New Note</h1>
     <form method="POST">
         {{ form.hidden_tag() }}
-        <div>
+        <div id='title'>
             {{ form.title.label }}: {{ form.title() }}
         </div>
-        <div>
+        <div id='content'>
             {{ form.content.label }}: {{ form.content() }}
         </div>
-        <div>
+        <div id='button'>
             {{ form.submit() }}
         </div>
     </form>

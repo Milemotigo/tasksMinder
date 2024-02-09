@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block title %}addnote{% endblock title %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h1>Create a New Note</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+	<div class="mb-3">
+		<label for="exampleFormControlInput1" class="form-label">{{ form.title.label }}</label>
+  	<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	{{ form.title }}
+	</div>
+	<div class="mb-3">
+		<label for="exampleFormControlTextarea1" class="form-label">{{ form.content.label }}</label>
+  	<textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{ form.content }}</textarea>
+	</div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+{% endif %}
+{% endblock content %}

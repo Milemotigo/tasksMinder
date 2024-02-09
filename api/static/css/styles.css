@@ -1,4 +1,7 @@
 .navbar-transition {
-	transition: top 0.3s;
+	transition: top 0.5s;
+}
+.navbar-transition2 { 
+	transition: bottom 0.5s;
 }
 .offcanvas-bottom {                                                                         bottom: 80px; /* Height of the navbar */                                            }

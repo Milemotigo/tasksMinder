@@ -30,14 +30,15 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion mt-5" id="accordionSidebar">
+	<div id='sidebar'>
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion mt-5" id="accordionSidebar" id='sidebar'>
 
             <!-- Sidebar - Brand -->
 	    <a class="sidebar-brand d-flex align-items-center justify-content-center mt-3" href="{{ url_for('todo.dashboard')}}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">TasksMinder <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -193,6 +194,7 @@
             </div>
 
         </ul>
+	</div>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -434,7 +436,7 @@
     </a> -->
     <!-- <nav class="navbar navbar-expand navbar-light bg-white topbar fixed-top shadow navbar-transition"
 -->
-    <nav class="navbar navbar-expand navbar-light bg-light topnav fixed-bottom shadow">
+    <nav class="navbar navbar-expand navbar-light bg-light topnav fixed-bottom shadow navbar-transition2">
 	<ul class="navbar-nav mx-auto">
 	    <li class='nav-item mx-3'>
 		<a class="nav-link" href="#" id="tog">
@@ -462,7 +464,7 @@
 		</a>
 	    </li>
 	    <li class='nav-item mx-3'>
-		    <a class="nav-link" href="{{ url_for('note.addNotes') }}">
+		    <a class="nav-link" href="{{ url_for('note.add_note') }}">
 	            <i class="bi bi-sticky"></i>
 			
 		    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-sticky" viewBox="0 0 16 16">
@@ -530,7 +532,9 @@
     <!-- Page level custom scripts -->
     <script src="{{ url_for('static', filename='js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ url_for('static', filename='js/demo/chart-pie-demo.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/nav/nav-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/note/addNote.js') }}"></script>
 </body>
 
 </html>
